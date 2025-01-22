@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column; /* Stack elements vertically */
+    }
+
+    div {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      margin-bottom: 10px; /* Add space between the divs */
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #2d2d2d;
+      margin-bottom: 20px;
+    }
+
+    #code {
+      font-weight: bold;
+      color: #007BFF;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h3>Registered Successfully! The login code <span id="code">{{ code }}</span> has been sent to you via Email.</h3>
+  </div>
+  
+    <!-- Button to go to the decrypt user template -->
+    <button>Go to Decrypt Page</button>
+
+</body>
+</html>

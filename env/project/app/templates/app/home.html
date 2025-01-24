@@ -12,7 +12,7 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: right;
+      justify-content: center;
       align-items: center;
       height: 100vh;
       flex-direction: column; /* Stack elements vertically */
@@ -54,15 +54,23 @@
     button:hover {
       background-color: #0056b3;
     }
+
+    /* Add space between the button and the message */
+    .btn-container {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
+      {% if messages %}
+          {% for message in messages %}
+              <class="message {% if message.tags == 'error' %} error-message {% endif %}">
+                  {{ message }}
+          {% endfor %}
+      {% endif %}
   <div>
-    <h3>Registered Successfully! The login code <span id="code">{{ code }}</span> has been sent to you via Email.</h3>
-  </div>
+    <a href="/login"><button>Go to Login Page</button></a>
+    </div>
   
-    <!-- Button to go to the decrypt user template -->
-    <button>Go to Decrypt Page</button>
-
 </body>
 </html>
